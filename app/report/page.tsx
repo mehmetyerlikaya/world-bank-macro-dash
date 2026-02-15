@@ -163,7 +163,7 @@ export default function ReportPage() {
           <h2 id="section-trends" className="sr-only">
             Indicator Trajectories
           </h2>
-          <div className="mb-6 animate-fade-in-up" style={{ animationFillMode: "both", animationDelay: "30ms" }}>
+          <div className="mb-6 animate-fade-in-up" style={{ animationFillMode: "both", animationDelay: "50ms" }}>
             <h3 className="text-soft-accent text-xs font-semibold uppercase tracking-wider">
               Indicator Trajectories
             </h3>
@@ -209,7 +209,7 @@ export default function ReportPage() {
           {isLoading ? (
             <SignalCardsSkeleton />
           ) : data ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 animate-fade-in-up" style={{ animationFillMode: "both", animationDelay: "150ms" }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 animate-fade-in-up" style={{ animationFillMode: "both", animationDelay: "220ms" }}>
               {data.buckets.map((bucket) => (
                 <SignalCard
                   key={bucket.id}
@@ -250,7 +250,7 @@ export default function ReportPage() {
         </section>
 
         {/* Footer */}
-        <footer className="pt-10 border-t-2 border-soft-border animate-fade-in-up" style={{ animationDelay: "250ms", animationFillMode: "both" }}>
+        <footer className="pt-10 border-t-2 border-soft-border animate-fade-in-up" style={{ animationDelay: "350ms", animationFillMode: "both" }}>
           <p className="text-sm text-soft-ink-muted leading-relaxed max-w-2xl">
             Scores: min-max normalized within country over your range. Trajectories = raw levels; deltas = YoY absolute change. Missing data is left blank on purpose.
           </p>

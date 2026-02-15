@@ -63,7 +63,7 @@ export default function HomePage() {
           <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: "320ms", animationFillMode: "both" }}>
             <Link
               href="/report"
-              className="group inline-flex items-center gap-2 px-6 py-3 bg-accent-gradient text-white font-medium text-sm rounded-xl shadow-soft-card transition-all duration-200 hover:shadow-soft-card-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-soft-accent focus-visible:ring-offset-2 focus-visible:ring-offset-soft-base"
+              className="group inline-flex items-center gap-2 px-6 py-3 bg-accent-gradient text-white font-medium text-sm rounded-xl shadow-soft-card transition-all duration-300 hover:scale-[1.03] hover:shadow-cta-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-soft-accent focus-visible:ring-offset-2 focus-visible:ring-offset-soft-base"
             >
               View Report
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden className="transition-transform duration-200 group-hover:translate-x-0.5">
@@ -86,7 +86,7 @@ export default function HomePage() {
               <article
                 key={section.id}
                 className="border-l-4 border-soft-accent/30 pl-6 py-2 animate-fade-in-up hover:border-soft-accent/50 transition-colors duration-300"
-                style={{ animationDelay: `${150 + i * 80}ms`, animationFillMode: "both" }}
+                style={{ animationDelay: `${150 + i * 120}ms`, animationFillMode: "both" }}
               >
                 <p className="text-soft-accent text-xs font-semibold uppercase tracking-wider mb-1">
                   {section.term}
@@ -112,7 +112,7 @@ export default function HomePage() {
               <div
                 key={c.term}
                 className="animate-fade-in-up"
-                style={{ animationDelay: `${100 + i * 60}ms`, animationFillMode: "both" }}
+                style={{ animationDelay: `${150 + i * 100}ms`, animationFillMode: "both" }}
               >
                 <dt className="font-semibold text-soft-ink mb-1">{c.term}</dt>
                 <dd className="text-soft-ink-muted text-[15px] leading-relaxed">{c.desc}</dd>
@@ -125,7 +125,7 @@ export default function HomePage() {
         <div className="text-center py-12 border-t-2 border-soft-border animate-fade-in-up">
             <Link
             href="/report"
-            className="group inline-flex items-center gap-2 px-6 py-3 border-2 border-soft-accent text-soft-accent font-medium text-sm rounded-xl hover:bg-accent-gradient hover:text-white hover:border-transparent transition-all duration-200"
+            className="group inline-flex items-center gap-2 px-6 py-3 border-2 border-soft-accent text-soft-accent font-medium text-sm rounded-xl hover:scale-[1.03] hover:bg-accent-gradient hover:text-white hover:border-transparent hover:shadow-cta-glow transition-all duration-300"
           >
             View Report
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden className="transition-transform duration-200 group-hover:translate-x-0.5">

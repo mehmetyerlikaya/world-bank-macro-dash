@@ -2,6 +2,7 @@
 
 import { TooltipCard } from "./TooltipCard";
 import { WaffleGrid } from "./WaffleGrid";
+import { CountUp } from "./CountUp";
 
 interface IndicatorInfo {
   code: string;
@@ -61,7 +62,7 @@ export function SignalCard({
   );
 
   const cardContent = (
-    <div className="group relative rounded-xl border border-soft-border bg-white p-6 shadow-soft-card transition-all duration-200 hover:-translate-y-0.5 hover:shadow-soft-card-hover hover:border-soft-accent/30 focus-within:ring-2 focus-within:ring-soft-accent/30 focus-within:ring-offset-2 focus-within:ring-offset-soft-base cursor-help">
+    <div className="group relative rounded-xl border border-soft-border bg-white p-6 shadow-soft-card transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-soft-card-hover hover:border-soft-accent/30 focus-within:ring-2 focus-within:ring-soft-accent/30 focus-within:ring-offset-2 focus-within:ring-offset-soft-base cursor-help">
       <p className="text-soft-accent text-xs font-semibold uppercase tracking-wider mb-3">
         {name}
       </p>
@@ -69,7 +70,7 @@ export function SignalCard({
         <>
           <div className="flex items-baseline gap-2 mb-5">
             <span className="font-display text-4xl font-bold text-soft-ink tabular-nums">
-              {displayScore}
+              <CountUp value={displayScore ?? 0} />
             </span>
             {displayDelta != null && (
               <span

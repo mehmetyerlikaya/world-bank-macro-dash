@@ -78,7 +78,7 @@ export function TrendsChart({ data }: TrendsChartProps) {
   }
 
   return (
-    <div className="rounded-xl border border-soft-border shadow-soft-card bg-white p-8 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-soft-card-hover">
+    <div className="rounded-xl border border-soft-border shadow-soft-card bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-soft-card-hover">
       <div className="h-[280px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
@@ -120,7 +120,7 @@ export function TrendsChart({ data }: TrendsChartProps) {
                 activeDot={{ r: 4, fill: color, stroke: "#fff", strokeWidth: 1 }}
                 connectNulls
                 isAnimationActive
-                animationDuration={400}
+                animationDuration={800}
                 animationEasing="ease-out"
               />
             ))}

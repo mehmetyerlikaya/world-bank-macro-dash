@@ -31,6 +31,7 @@ const config: Config = {
       boxShadow: {
         "soft-card": "0 2px 8px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.06)",
         "soft-card-hover": "0 4px 12px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.08)",
+        "cta-glow": "0 0 24px rgba(255,122,108,0.35), 0 4px 12px rgba(0,0,0,0.08)",
       },
       borderRadius: {
         "soft": "12px",
@@ -42,7 +43,7 @@ const config: Config = {
           "100%": { opacity: "1" },
         },
         fadeInUp: {
-          "0%": { opacity: "0", transform: "translateY(16px)" },
+          "0%": { opacity: "0", transform: "translateY(24px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         fadeInScale: {
@@ -57,7 +58,7 @@ const config: Config = {
       },
       animation: {
         "fade-in": "fadeIn 400ms ease-out",
-        "fade-in-up": "fadeInUp 500ms ease-out forwards",
+        "fade-in-up": "fadeInUp 600ms ease-out forwards",
         "fade-in-scale": "fadeInScale 450ms ease-out forwards",
       },
       backdropBlur: {

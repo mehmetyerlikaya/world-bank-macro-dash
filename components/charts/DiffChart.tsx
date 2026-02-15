@@ -120,7 +120,7 @@ export function DiffChart({ data }: DiffChartProps) {
   );
 
   return (
-    <div className="rounded-xl border border-soft-border shadow-soft-card bg-white p-8 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-soft-card-hover">
+    <div className="rounded-xl border border-soft-border shadow-soft-card bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-soft-card-hover">
       <div className="h-[320px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
@@ -157,7 +157,7 @@ export function DiffChart({ data }: DiffChartProps) {
                 maxBarSize={24}
                 radius={[0, 2, 2, 0]}
                 isAnimationActive
-                animationDuration={400}
+                animationDuration={800}
                 animationEasing="ease-out"
               >
                 {chartData.map((entry, i) => {
