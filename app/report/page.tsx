@@ -1,6 +1,7 @@
 "use client";
 
 import useSWR from "swr";
+import Link from "next/link";
 import { useMemo, useState, useEffect } from "react";
 import { CountrySelect } from "@/components/controls/CountrySelect";
 import { RangeSelect } from "@/components/controls/RangeSelect";
@@ -145,6 +146,12 @@ export default function ReportPage() {
             <div className="flex flex-wrap items-center gap-3">
               <CountrySelect value={country} onValueChange={setCountry} />
               <RangeSelect value={range} onValueChange={setRange} />
+              <Link
+                href={`/report/compare?countries=${country}`}
+                className="text-sm font-medium text-soft-accent hover:text-soft-accent/80 transition-colors"
+              >
+                Compare with others →
+              </Link>
               {data ? (
                 <span className="text-xs text-soft-ink-muted px-3 py-2 rounded-xl border border-soft-border bg-soft-base font-medium">
                   Latest: {data.latestYear}

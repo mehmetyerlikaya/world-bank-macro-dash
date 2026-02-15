@@ -70,6 +70,15 @@ export default function HomePage() {
                 <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </Link>
+            <Link
+              href="/report/compare"
+              className="group inline-flex items-center gap-2 px-6 py-3 border-2 border-soft-accent text-soft-accent font-medium text-sm rounded-xl hover:scale-[1.03] hover:bg-accent-gradient hover:text-white hover:border-transparent hover:shadow-cta-glow transition-all duration-300"
+            >
+              Compare Countries
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden className="transition-transform duration-200 group-hover:translate-x-0.5">
+                <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Link>
           </div>
         </header>
 

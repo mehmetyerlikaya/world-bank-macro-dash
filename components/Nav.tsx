@@ -37,7 +37,17 @@ export function Nav() {
                 : "text-soft-ink-muted hover:text-soft-ink after:scale-x-0 hover:after:scale-x-100"
             }`}
           >
-            Country Report
+            Report
+          </Link>
+          <Link
+            href="/report/compare"
+            className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 after:absolute after:bottom-0 after:left-2 after:right-2 after:h-0.5 after:rounded-full after:bg-soft-accent after:transition-transform after:duration-150 after:origin-center ${
+              pathname === "/report/compare"
+                ? "text-soft-accent bg-soft-accent/10 after:scale-x-100"
+                : "text-soft-ink-muted hover:text-soft-ink after:scale-x-0 hover:after:scale-x-100"
+            }`}
+          >
+            Compare
           </Link>
         </div>
       </div>

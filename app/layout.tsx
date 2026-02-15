@@ -3,6 +3,7 @@ import "./globals.css";
 import { BackgroundFX } from "@/components/BackgroundFX";
 import { TooltipProvider } from "@/components/TooltipProvider";
 import { Nav } from "@/components/Nav";
+import { HydrationSafe } from "@/components/HydrationSafe";
 
 export const metadata: Metadata = {
   title: "Country Facts | Macro indicators from World Bank",
@@ -18,9 +19,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="antialiased" suppressHydrationWarning>
         <TooltipProvider>
-          <BackgroundFX />
-          <Nav />
-          {children}
+          <HydrationSafe>
+            <BackgroundFX />
+            <Nav />
+            {children}
+          </HydrationSafe>
         </TooltipProvider>
       </body>
     </html>
