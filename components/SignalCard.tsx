@@ -42,41 +42,41 @@ export function SignalCard({
     <div className="space-y-2">
       {indicators.map((ind) => (
         <div key={ind.code}>
-          <span className="text-ledger-accent font-mono text-xs">{ind.code}</span>
+          <span className="text-soft-accent font-mono text-xs">{ind.code}</span>
           <br />
-          <span className="text-ledger-ink">{ind.label}</span>
+          <span className="text-soft-ink">{ind.label}</span>
           {ind.latestValue != null && ind.latestYear && (
-            <p className="text-ledger-ink-muted text-xs mt-0.5">
+            <p className="text-soft-ink-muted text-xs mt-0.5">
               {formatValue(ind.latestValue, ind.code)} ({ind.latestYear})
             </p>
           )}
         </div>
       ))}
-      <p className="text-ledger-ink-muted text-xs pt-2 border-t border-ledger-border mt-2">
+      <p className="text-soft-ink-muted text-xs pt-2 border-t border-soft-border mt-2">
         {interpretation}
       </p>
     </div>
   ) : (
-    <p className="text-ledger-ink-muted">No data for this period.</p>
+    <p className="text-soft-ink-muted">No data for this period.</p>
   );
 
   const cardContent = (
-    <div className="group relative rounded border-2 border-ledger-border bg-white p-6 transition-all duration-300 hover:border-ledger-accent/40 hover:shadow-md focus-within:ring-2 focus-within:ring-ledger-accent/30 focus-within:ring-offset-2 focus-within:ring-offset-ledger-paper cursor-help">
-      <p className="text-ledger-accent text-xs font-semibold uppercase tracking-wider mb-3">
+    <div className="group relative rounded-xl border border-soft-border bg-white p-6 shadow-soft-card transition-all duration-300 hover:shadow-soft-card-hover hover:border-soft-accent/30 focus-within:ring-2 focus-within:ring-soft-accent/30 focus-within:ring-offset-2 focus-within:ring-offset-soft-base cursor-help">
+      <p className="text-soft-accent text-xs font-semibold uppercase tracking-wider mb-3">
         {name}
       </p>
       {hasData ? (
         <>
           <div className="flex items-baseline gap-2 mb-5">
-            <span className="font-display text-4xl font-bold text-ledger-ink tabular-nums">
+            <span className="font-display text-4xl font-bold text-soft-ink tabular-nums">
               {displayScore}
             </span>
             {displayDelta != null && (
               <span
                 className={`text-xs font-semibold px-1.5 py-0.5 rounded ${
                   displayDelta >= 0
-                    ? "text-ledger-positive bg-ledger-positive/10"
-                    : "text-ledger-negative bg-ledger-negative/10"
+                    ? "text-soft-positive bg-soft-positive/10"
+                    : "text-soft-negative bg-soft-negative/10"
                 }`}
               >
                 {displayDelta >= 0 ? "+" : ""}
@@ -88,7 +88,7 @@ export function SignalCard({
         </>
       ) : (
         <div className="flex flex-col gap-3">
-          <p className="font-display text-lg text-ledger-ink-faint italic">No data</p>
+          <p className="font-display text-lg text-soft-ink-faint italic">No data</p>
           <div className="opacity-40">
             <WaffleGrid score={0} />
           </div>

@@ -15,15 +15,15 @@ export function TooltipCard({ trigger, title, children }: TooltipCardProps) {
       <Tooltip.Portal>
         <Tooltip.Content
           sideOffset={10}
-          className="z-50 max-w-[300px] rounded border-2 border-ledger-border bg-white shadow-xl animate-fade-in"
+          className="z-50 max-w-[300px] rounded border border-soft-border rounded-xl shadow-soft-card bg-white shadow-xl animate-fade-in"
         >
           <div className="p-5">
             {title && (
-              <p className="text-ledger-accent text-xs font-semibold uppercase tracking-wider mb-2">
+              <p className="text-soft-accent text-xs font-semibold uppercase tracking-wider mb-2">
                 {title}
               </p>
             )}
-            <div className="text-sm text-ledger-ink-muted leading-relaxed">
+            <div className="text-sm text-soft-ink-muted leading-relaxed">
               {children}
             </div>
           </div>

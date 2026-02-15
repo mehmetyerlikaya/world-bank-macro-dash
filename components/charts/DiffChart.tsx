@@ -29,8 +29,8 @@ const CustomTooltip = ({
 }) => {
   if (!active || !payload?.length || !label) return null;
   return (
-    <div className="rounded border-2 border-ledger-border bg-white px-4 py-3 shadow-xl">
-      <p className="text-ledger-accent text-xs font-semibold uppercase tracking-wider mb-2">
+    <div className="rounded-xl border border-soft-border shadow-soft-card bg-white px-4 py-3 ">
+      <p className="text-soft-accent text-xs font-semibold uppercase tracking-wider mb-2">
         YoY change ({label})
       </p>
       <div className="space-y-1">
@@ -44,10 +44,10 @@ const CustomTooltip = ({
             const isGood = cfg.improveUp ? isPositive : !isPositive;
             return (
               <div key={p.name} className="flex items-center justify-between gap-4 text-sm">
-                <span className="text-ledger-ink-muted">{cfg.label}:</span>
+                <span className="text-soft-ink-muted">{cfg.label}:</span>
                 <span
                   className={`font-semibold tabular-nums ${
-                    isGood ? "text-ledger-positive" : "text-ledger-negative"
+                    isGood ? "text-soft-positive" : "text-soft-negative"
                   }`}
                 >
                   {isPositive ? "+" : ""}
@@ -108,8 +108,8 @@ export function DiffChart({ data }: DiffChartProps) {
 
   if (byYear.length === 0) {
     return (
-      <div className="rounded border-2 border-ledger-border bg-white p-8 h-[320px] flex items-center justify-center">
-        <p className="text-ledger-ink-muted text-sm">No YoY deltas here—check a different range.</p>
+      <div className="rounded-xl border border-soft-border shadow-soft-card bg-white p-8 h-[320px] flex items-center justify-center">
+        <p className="text-soft-ink-muted text-sm">No YoY deltas here—check a different range.</p>
       </div>
     );
   }
@@ -120,7 +120,7 @@ export function DiffChart({ data }: DiffChartProps) {
   );
 
   return (
-    <div className="rounded border-2 border-ledger-border bg-white p-8">
+    <div className="rounded-xl border border-soft-border shadow-soft-card bg-white p-8">
       <div className="h-[320px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
@@ -130,13 +130,13 @@ export function DiffChart({ data }: DiffChartProps) {
             barCategoryGap="20%"
             barGap={4}
           >
-            <CartesianGrid strokeDasharray="3 3" stroke="#d4cfc4" horizontal={false} />
+            <CartesianGrid strokeDasharray="3 3" stroke="#E8E8E8" horizontal={false} />
             <XAxis
               type="number"
               domain={[-maxAbs, maxAbs]}
               axisLine={false}
               tickLine={false}
-              tick={{ fill: "#5c564d", fontSize: 11 }}
+              tick={{ fill: "#6B6B6B", fontSize: 11 }}
               tickFormatter={(v) => (v >= 0 ? `+${v}` : String(v))}
             />
             <YAxis
@@ -144,11 +144,11 @@ export function DiffChart({ data }: DiffChartProps) {
               dataKey="year"
               axisLine={false}
               tickLine={false}
-              tick={{ fill: "#5c564d", fontSize: 11 }}
+              tick={{ fill: "#6B6B6B", fontSize: 11 }}
               width={44}
             />
-            <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(45,90,74,0.06)" }} />
-            <ReferenceLine x={0} stroke="#5c564d" strokeOpacity={0.3} strokeWidth={1} />
+            <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(255,122,108,0.06)" }} />
+            <ReferenceLine x={0} stroke="#6B6B6B" strokeOpacity={0.3} strokeWidth={1} />
             {indicators.map(({ code, label }) => (
               <Bar
                 key={code}
@@ -167,7 +167,7 @@ export function DiffChart({ data }: DiffChartProps) {
                   return (
                     <Cell
                       key={`${entry.year}-${i}`}
-                      fill={val >= 0 ? "rgba(37,99,75,0.6)" : "rgba(139,58,58,0.6)"}
+                      fill={val >= 0 ? "rgba(94,235,132,0.6)" : "rgba(255,122,108,0.6)"}
                     />
                   );
                 })}

@@ -19,8 +19,8 @@ export function WaffleGrid({ score }: { score: number }) {
           key={i}
           className={`aspect-square rounded-sm transition-colors duration-250 ${
             filled
-              ? "bg-ledger-accent/60 group-hover:bg-ledger-accent/70"
-              : "bg-ledger-border"
+              ? "bg-soft-accent/60 group-hover:bg-soft-accent/70"
+              : "bg-soft-border"
           }`}
         />
       ))}

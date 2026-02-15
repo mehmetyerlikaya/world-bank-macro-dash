@@ -9,23 +9,32 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ledger: {
-          paper: "#f5f0e8",
-          cream: "#ebe5db",
-          ink: "#2c2822",
-          "ink-muted": "#5c564d",
-          "ink-faint": "#8a8479",
-          accent: "#2d5a4a",
-          "accent-light": "#3d7a65",
-          sepia: "#6b5344",
-          border: "#d4cfc4",
-          positive: "#25634b",
-          negative: "#8b3a3a",
+        soft: {
+          base: "#F7F7F7",
+          card: "#FFFFFF",
+          ink: "#2B2B2B",
+          "ink-muted": "#6B6B6B",
+          "ink-faint": "#9A9A9A",
+          accent: "#FF7A6C",
+          "accent-light": "#FFB09C",
+          border: "#E8E8E8",
+          positive: "#5EEB84",
+          negative: "#FF7A6C",
+          warning: "#F9CE87",
         },
       },
       fontFamily: {
-        display: ["Libre Baskerville", "Georgia", "serif"],
-        body: ["Source Serif 4", "Georgia", "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        display: ["Inter", "system-ui", "sans-serif"],
+        body: ["Inter", "system-ui", "sans-serif"],
+      },
+      boxShadow: {
+        "soft-card": "0 2px 8px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.06)",
+        "soft-card-hover": "0 4px 12px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.08)",
+      },
+      borderRadius: {
+        "soft": "12px",
+        "soft-lg": "16px",
       },
       keyframes: {
         fadeIn: {

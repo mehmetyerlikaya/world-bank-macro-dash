@@ -95,13 +95,13 @@ export default function ReportPage() {
     return (
       <main className="min-h-screen pt-14">
         <div className="max-w-5xl mx-auto px-6 sm:px-8 py-14 sm:py-20">
-          <div className="h-24 mb-16 animate-pulse bg-ledger-cream rounded max-w-md" />
+          <div className="h-24 mb-16 animate-pulse bg-soft-base rounded max-w-md" />
           <div className="space-y-20">
-            <div className="h-[320px] animate-pulse bg-ledger-cream rounded" />
-            <div className="h-[320px] animate-pulse bg-ledger-cream rounded" />
+            <div className="h-[320px] animate-pulse bg-soft-base rounded" />
+            <div className="h-[320px] animate-pulse bg-soft-base rounded" />
             <div className="grid grid-cols-4 gap-4">
               {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="h-48 animate-pulse bg-ledger-cream rounded" />
+                <div key={i} className="h-48 animate-pulse bg-soft-base rounded" />
               ))}
             </div>
           </div>
@@ -114,9 +114,9 @@ export default function ReportPage() {
     return (
       <div className="min-h-screen pt-14 flex items-center justify-center p-8">
         <div className="max-w-md w-full">
-          <div className="rounded border-2 border-ledger-negative/30 bg-white p-8 text-ledger-ink">
+          <div className="rounded-xl border border-soft-negative/40 bg-white p-8 shadow-soft-card text-soft-ink">
             <p className="font-display font-bold text-lg">Couldn’t fetch data</p>
-            <p className="text-sm mt-2 text-ledger-ink-muted leading-relaxed">
+            <p className="text-sm mt-2 text-soft-ink-muted leading-relaxed">
               World Bank API might be down. Give it another try.
             </p>
           </div>
@@ -132,13 +132,13 @@ export default function ReportPage() {
         <header className="mb-16 animate-fade-in-up">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-8">
             <div>
-              <p className="text-ledger-accent text-xs font-semibold tracking-wider uppercase mb-2">
+              <p className="text-soft-accent text-xs font-semibold tracking-wider uppercase mb-2">
                 Country Report
               </p>
-              <h1 className="font-display text-3xl sm:text-4xl font-bold text-ledger-ink tracking-tight">
+              <h1 className="font-display text-3xl sm:text-4xl font-bold text-soft-ink tracking-tight">
                 Country Facts
               </h1>
-              <p className="mt-2 text-ledger-ink-muted text-sm">
+              <p className="mt-2 text-soft-ink-muted text-sm">
                 Pick a country and range—everything updates from there
               </p>
             </div>
@@ -146,11 +146,11 @@ export default function ReportPage() {
               <CountrySelect value={country} onValueChange={setCountry} />
               <RangeSelect value={range} onValueChange={setRange} />
               {data ? (
-                <span className="text-xs text-ledger-ink-muted px-3 py-2 rounded border border-ledger-border bg-ledger-cream font-medium">
+                <span className="text-xs text-soft-ink-muted px-3 py-2 rounded-xl border border-soft-border bg-soft-base font-medium">
                   Latest: {data.latestYear}
                 </span>
               ) : (
-                <span className="text-xs text-ledger-ink-faint px-3 py-2 rounded border border-ledger-border bg-ledger-cream animate-pulse">
+                <span className="text-xs text-soft-ink-faint px-3 py-2 rounded-xl border border-soft-border bg-soft-base animate-pulse">
                   Loading…
                 </span>
               )}
@@ -164,7 +164,7 @@ export default function ReportPage() {
             Indicator Trajectories
           </h2>
           <div className="mb-6 animate-fade-in-up" style={{ animationFillMode: "both", animationDelay: "30ms" }}>
-            <h3 className="text-ledger-accent text-xs font-semibold uppercase tracking-wider">
+            <h3 className="text-soft-accent text-xs font-semibold uppercase tracking-wider">
               Indicator Trajectories
             </h3>
           </div>
@@ -183,7 +183,7 @@ export default function ReportPage() {
             Annual Deltas
           </h2>
           <div className="mb-6 animate-fade-in-up" style={{ animationFillMode: "both", animationDelay: "80ms" }}>
-            <h3 className="text-ledger-accent text-xs font-semibold uppercase tracking-wider">
+            <h3 className="text-soft-accent text-xs font-semibold uppercase tracking-wider">
               Annual Deltas
             </h3>
           </div>
@@ -202,7 +202,7 @@ export default function ReportPage() {
             Dimension Indices
           </h2>
           <div className="mb-6 animate-fade-in-up" style={{ animationFillMode: "both", animationDelay: "120ms" }}>
-            <h3 className="text-ledger-accent text-xs font-semibold uppercase tracking-wider">
+            <h3 className="text-soft-accent text-xs font-semibold uppercase tracking-wider">
               Dimension Indices
             </h3>
           </div>
@@ -233,7 +233,7 @@ export default function ReportPage() {
             Growth Levers and Headwinds
           </h2>
           <div className="mb-6 animate-fade-in-up" style={{ animationFillMode: "both", animationDelay: "160ms" }}>
-            <h3 className="text-ledger-accent text-xs font-semibold uppercase tracking-wider">
+            <h3 className="text-soft-accent text-xs font-semibold uppercase tracking-wider">
               Growth Levers and Headwinds
             </h3>
           </div>
@@ -250,11 +250,11 @@ export default function ReportPage() {
         </section>
 
         {/* Footer */}
-        <footer className="pt-10 border-t-2 border-ledger-border animate-fade-in-up" style={{ animationDelay: "250ms", animationFillMode: "both" }}>
-          <p className="text-sm text-ledger-ink-muted leading-relaxed max-w-2xl">
+        <footer className="pt-10 border-t-2 border-soft-border animate-fade-in-up" style={{ animationDelay: "250ms", animationFillMode: "both" }}>
+          <p className="text-sm text-soft-ink-muted leading-relaxed max-w-2xl">
             Scores: min-max normalized within country over your range. Trajectories = raw levels; deltas = YoY absolute change. Missing data is left blank on purpose.
           </p>
-          <p className="text-xs text-ledger-ink-faint mt-3">
+          <p className="text-xs text-soft-ink-faint mt-3">
             Exploratory tool—use for curiosity, not formal policy decisions.
           </p>
         </footer>

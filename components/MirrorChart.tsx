@@ -59,18 +59,18 @@ export function MirrorChart({
   const allRows: RowData[] = [...momentumRows, ...frictionRows];
 
   return (
-    <div className="rounded border-2 border-ledger-border bg-white p-8">
+    <div className="rounded-xl border border-soft-border bg-white p-8 shadow-soft-card">
       <div className="flex items-center justify-between mb-8">
-        <h3 className="text-ledger-accent text-xs font-semibold uppercase tracking-wider">
+        <h3 className="text-soft-accent text-xs font-semibold uppercase tracking-wider">
           Growth Levers and Headwinds
         </h3>
-        <div className="flex gap-4 text-xs text-ledger-ink-muted">
+        <div className="flex gap-4 text-xs text-soft-ink-muted">
           <span className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-sm bg-ledger-positive" aria-hidden />
+            <span className="w-2 h-2 rounded-sm bg-soft-positive" aria-hidden />
             Levers
           </span>
           <span className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-sm bg-ledger-negative" aria-hidden />
+            <span className="w-2 h-2 rounded-sm bg-soft-negative" aria-hidden />
             Headwinds
           </span>
         </div>
@@ -89,16 +89,16 @@ function MirrorRow({ row }: { row: RowData }) {
 
   const tooltipContent = (
     <div className="space-y-2">
-      <p className="text-ledger-ink font-semibold">{row.label}</p>
+      <p className="text-soft-ink font-semibold">{row.label}</p>
       {row.values.length > 0 ? (
         <>
-          <p className="text-xs text-ledger-ink-muted">Recent values:</p>
+          <p className="text-xs text-soft-ink-muted">Recent values:</p>
           <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs">
             {row.values.map((v) => (
               <span
                 key={v.year}
                 className={
-                  v.year === row.latestYear ? "text-ledger-ink font-semibold" : "text-ledger-ink-muted"
+                  v.year === row.latestYear ? "text-soft-ink font-semibold" : "text-soft-ink-muted"
                 }
               >
                 {v.year}: {formatCompactVal(v.value, row.indicator)}
@@ -107,9 +107,9 @@ function MirrorRow({ row }: { row: RowData }) {
           </div>
         </>
       ) : (
-        <p className="text-ledger-ink-muted text-xs">No data</p>
+        <p className="text-soft-ink-muted text-xs">No data</p>
       )}
-      <p className="text-ledger-ink-muted text-xs pt-2 border-t border-ledger-border mt-2">
+      <p className="text-soft-ink-muted text-xs pt-2 border-t border-soft-border mt-2">
         {row.explanation}
       </p>
     </div>
@@ -117,26 +117,26 @@ function MirrorRow({ row }: { row: RowData }) {
 
   return (
     <TooltipCard trigger={
-      <div className="group/row flex items-center gap-5 cursor-help focus:outline-none focus-visible:ring-2 focus-visible:ring-ledger-accent/30 focus-visible:ring-offset-2 focus-visible:ring-offset-ledger-paper rounded py-1.5 -my-1.5 transition-colors duration-200 hover:bg-ledger-cream/50">
-        <div className="w-40 sm:w-52 flex-shrink-0 text-sm text-ledger-ink-muted truncate" title={row.label}>
+      <div className="group/row flex items-center gap-5 cursor-help focus:outline-none focus-visible:ring-2 focus-visible:ring-soft-accent/30 focus-visible:ring-offset-2 focus-visible:ring-offset-soft-paper rounded py-1.5 -my-1.5 transition-colors duration-200 hover:bg-soft-base/50">
+        <div className="w-40 sm:w-52 flex-shrink-0 text-sm text-soft-ink-muted truncate" title={row.label}>
           {row.label}
         </div>
         <div className="flex-1 flex items-stretch h-7 min-w-0">
           <div className="flex-1 flex justify-end pr-2">
             {row.side === "momentum" && barWidth > 0 ? (
               <div
-                className="h-full bg-ledger-positive/40 rounded-l transition-all duration-300 group-hover/row:bg-ledger-positive/55"
+                className="h-full bg-soft-positive/40 rounded-l transition-all duration-300 group-hover/row:bg-soft-positive/55"
                 style={{ width: `${barWidth}%` }}
               />
             ) : (
               <div className="h-full w-0" />
             )}
           </div>
-          <div className="w-px bg-ledger-border flex-shrink-0" aria-hidden />
+          <div className="w-px bg-soft-border flex-shrink-0" aria-hidden />
           <div className="flex-1 flex justify-start pl-2">
             {row.side === "friction" && barWidth > 0 ? (
               <div
-                className="h-full bg-ledger-negative/40 rounded-r ml-auto transition-all duration-300 group-hover/row:bg-ledger-negative/55"
+                className="h-full bg-soft-negative/40 rounded-r ml-auto transition-all duration-300 group-hover/row:bg-soft-negative/55"
                 style={{ width: `${barWidth}%` }}
               />
             ) : (
