@@ -16,7 +16,7 @@ export function Nav() {
           href="/"
           className="font-display text-lg font-bold text-ledger-ink hover:text-ledger-accent transition-colors duration-200"
         >
-          Country Signals
+          Country Facts
         </Link>
         <div className="flex items-center gap-1">
           <Link

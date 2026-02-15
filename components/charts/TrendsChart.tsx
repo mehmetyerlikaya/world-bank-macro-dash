@@ -13,7 +13,7 @@ import {
 import { useMemo } from "react";
 import { TREND_CHART_INDICATORS } from "@/lib/worldbank";
 
-const CHART_COLORS = ["#2d5a4a", "#3d7a65", "#8b3a3a", "#6b5344", "#5c4033"];
+const CHART_COLORS = ["#2d5a4a", "#3d7a65", "#8b3a3a", "#6b5344", "#5c4033", "#2d5a4a", "#3d7a65"];
 
 interface TrendsChartProps {
   data: Array<Record<string, string | number>>;
@@ -21,8 +21,9 @@ interface TrendsChartProps {
 
 function formatTooltipVal(val: number, code: string): string {
   if (code.includes("GINI")) return val.toFixed(1);
-  if (code.includes("ZS") || code.includes("USER")) return `${val.toFixed(1)}%`;
+  if (code.includes("ZS") || code.includes("USER") || code.includes("ELC")) return `${val.toFixed(1)}%`;
   if (code.includes("GDP") || code.includes("GROWTH") || code.includes("ZG")) return `${val.toFixed(1)}%`;
+  if (code.includes("LE00")) return `${val.toFixed(1)} yrs`;
   return val.toLocaleString(undefined, { maximumFractionDigits: 1 });
 }
 

@@ -136,7 +136,7 @@ export default function ReportPage() {
                 Country Report
               </p>
               <h1 className="font-display text-3xl sm:text-4xl font-bold text-ledger-ink tracking-tight">
-                Country Signals
+                Country Facts
               </h1>
               <p className="mt-2 text-ledger-ink-muted text-sm">
                 Pick a country and range—everything updates from there

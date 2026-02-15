@@ -52,7 +52,7 @@ export default function HomePage() {
             Powered by World Bank Open Data
           </p>
           <h1 className="font-display text-4xl sm:text-5xl font-bold text-ledger-ink leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "80ms", animationFillMode: "both" }}>
-            Country Signals
+            Country Facts
           </h1>
           <p className="text-ledger-ink-muted text-lg leading-relaxed mb-6 animate-fade-in-up" style={{ animationDelay: "160ms", animationFillMode: "both" }}>
             I put this together to explore how macro indicators move across countries—something I kept coming back to during my thesis. Personal project, but the data and methodology are sound. Useful if you’re into development economics or comparative growth.
@@ -65,7 +65,7 @@ export default function HomePage() {
               href="/report"
               className="inline-flex items-center gap-2 px-6 py-3 bg-ledger-accent text-white font-medium text-sm rounded border border-ledger-accent hover:bg-ledger-accent-light transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ledger-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ledger-paper"
             >
-              View Country Report
+              View Report
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
                 <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -127,7 +127,7 @@ export default function HomePage() {
             href="/report"
             className="inline-flex items-center gap-2 px-6 py-3 border-2 border-ledger-accent text-ledger-accent font-medium text-sm rounded hover:bg-ledger-accent hover:text-white transition-all duration-200"
           >
-            View Country Report
+            View Report
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
               <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>

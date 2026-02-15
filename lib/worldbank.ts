@@ -19,6 +19,8 @@ export const INDICATORS = {
   POP_GROWTH: "SP.POP.GROW", // Population growth (annual %)
   SCHOOL_ENROLL: "SE.SEC.ENRR", // Secondary school enrollment
   HEALTH_EXP: "SH.XPD.CHEX.GD.ZS", // Current health expenditure (% of GDP)
+  LIFE_EXPECTANCY: "SP.DYN.LE00.IN", // Life expectancy at birth (years)
+  ELECTRICITY: "EG.ELC.ACCS.ZS", // Access to electricity (% of population)
 } as const;
 
 /** Human-readable labels for indicators */
@@ -35,15 +37,19 @@ export const INDICATOR_LABELS: Record<string, string> = {
   [INDICATORS.POP_GROWTH]: "Population growth",
   [INDICATORS.SCHOOL_ENROLL]: "Secondary enrollment",
   [INDICATORS.HEALTH_EXP]: "Health expenditure (% GDP)",
+  [INDICATORS.LIFE_EXPECTANCY]: "Life expectancy (years)",
+  [INDICATORS.ELECTRICITY]: "Access to electricity (%)",
 };
 
 /** Indicators for trend-line charts (core macro + structural) */
 export const TREND_CHART_INDICATORS = [
-  { code: INDICATORS.GDP_GROWTH, label: INDICATOR_LABELS[INDICATORS.GDP_GROWTH], color: "#34d399" },
-  { code: INDICATORS.INTERNET, label: INDICATOR_LABELS[INDICATORS.INTERNET], color: "#60a5fa" },
-  { code: INDICATORS.UNEMPLOYMENT, label: INDICATOR_LABELS[INDICATORS.UNEMPLOYMENT], color: "#f87171" },
-  { code: INDICATORS.INFLATION, label: INDICATOR_LABELS[INDICATORS.INFLATION], color: "#fbbf24" },
-  { code: INDICATORS.GINI, label: INDICATOR_LABELS[INDICATORS.GINI], color: "#a78bfa" },
+  { code: INDICATORS.GDP_GROWTH, label: INDICATOR_LABELS[INDICATORS.GDP_GROWTH], color: "#2d5a4a" },
+  { code: INDICATORS.INTERNET, label: INDICATOR_LABELS[INDICATORS.INTERNET], color: "#3d7a65" },
+  { code: INDICATORS.UNEMPLOYMENT, label: INDICATOR_LABELS[INDICATORS.UNEMPLOYMENT], color: "#8b3a3a" },
+  { code: INDICATORS.INFLATION, label: INDICATOR_LABELS[INDICATORS.INFLATION], color: "#6b5344" },
+  { code: INDICATORS.GINI, label: INDICATOR_LABELS[INDICATORS.GINI], color: "#5c4033" },
+  { code: INDICATORS.LIFE_EXPECTANCY, label: INDICATOR_LABELS[INDICATORS.LIFE_EXPECTANCY], color: "#2d5a4a" },
+  { code: INDICATORS.ELECTRICITY, label: INDICATOR_LABELS[INDICATORS.ELECTRICITY], color: "#3d7a65" },
 ] as const;
 
 /** Indicators for YoY diff chart (absolute change) */

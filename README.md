@@ -1,6 +1,6 @@
-# Country Signals
+# Country Facts
 
-Research-grade interactive dashboard for World Bank macroeconomic indicators. Atlas-inspired design with Cormorant Garamond + IBM Plex Sans typography. Explore GDP, employment, connectivity, inequality across 15+ countries.
+Interactive dashboard for World Bank macroeconomic indicators. Explore GDP, employment, connectivity, inequality, life expectancy, and more across 16 countries.
 
 ## Run
 
@@ -24,11 +24,11 @@ Open [http://localhost:3000/report](http://localhost:3000/report).
 - Source: World Bank Open Data API (no key required)
 - Cached server-side with `revalidate: 3600`
 - Scores min-max normalized over the selected date range per country
-- Additional indicators: trade openness, fertility, population growth, education, health expenditure
+- Additional indicators: life expectancy, electricity access, trade, fertility, population growth, education, health
 
 ## Sections
 
-1. **Key Indicators Over Time** — Multi-line trend chart (GDP growth, Internet, Unemployment, Inflation, Gini)
-2. **Year-over-Year Change** — Diverging bar chart of annual deltas
-3. **Signal Distribution** — Composite scores (Prosperity, Employment, Connectivity, Inequality)
-4. **Momentum vs Friction** — Relative positioning of drivers and drags
+1. **Indicator Trajectories** — Trend chart (GDP growth, Internet, Unemployment, Inflation, Gini, Life expectancy, Electricity)
+2. **Annual Deltas** — Year-over-year change
+3. **Dimension Indices** — Composite scores (Prosperity, Employment, Connectivity, Inequality)
+4. **Growth Levers and Headwinds** — Momentum vs friction
