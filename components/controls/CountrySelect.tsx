@@ -23,7 +23,7 @@ export function CountrySelect({
       </Select.Trigger>
       <Select.Portal>
         <Select.Content
-          className="z-50 min-w-[200px] overflow-hidden rounded-xl border border-soft-border bg-white shadow-soft-card data-[state=open]:animate-fade-in"
+          className="z-50 min-w-[200px] overflow-hidden rounded-xl border border-soft-border bg-white shadow-soft-card transition-all duration-150 data-[state=open]:animate-fade-in"
           position="popper"
           sideOffset={6}
         >

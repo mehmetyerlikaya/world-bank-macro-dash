@@ -63,10 +63,10 @@ export default function HomePage() {
           <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: "320ms", animationFillMode: "both" }}>
             <Link
               href="/report"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-accent-gradient text-white font-medium text-sm rounded-xl shadow-soft-card transition-all duration-200 hover:shadow-soft-card-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-soft-accent focus-visible:ring-offset-2 focus-visible:ring-offset-soft-base"
+              className="group inline-flex items-center gap-2 px-6 py-3 bg-accent-gradient text-white font-medium text-sm rounded-xl shadow-soft-card transition-all duration-200 hover:shadow-soft-card-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-soft-accent focus-visible:ring-offset-2 focus-visible:ring-offset-soft-base"
             >
               View Report
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden className="transition-transform duration-200 group-hover:translate-x-0.5">
                 <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </Link>
@@ -123,12 +123,12 @@ export default function HomePage() {
 
         {/* CTA */}
         <div className="text-center py-12 border-t-2 border-soft-border animate-fade-in-up">
-          <Link
+            <Link
             href="/report"
-            className="inline-flex items-center gap-2 px-6 py-3 border-2 border-soft-accent text-soft-accent font-medium text-sm rounded-xl hover:bg-accent-gradient hover:text-white hover:border-transparent transition-all duration-200"
+            className="group inline-flex items-center gap-2 px-6 py-3 border-2 border-soft-accent text-soft-accent font-medium text-sm rounded-xl hover:bg-accent-gradient hover:text-white hover:border-transparent transition-all duration-200"
           >
             View Report
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden className="transition-transform duration-200 group-hover:translate-x-0.5">
               <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </Link>

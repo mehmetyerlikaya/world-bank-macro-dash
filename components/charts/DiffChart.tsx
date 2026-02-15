@@ -120,7 +120,7 @@ export function DiffChart({ data }: DiffChartProps) {
   );
 
   return (
-    <div className="rounded-xl border border-soft-border shadow-soft-card bg-white p-8">
+    <div className="rounded-xl border border-soft-border shadow-soft-card bg-white p-8 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-soft-card-hover">
       <div className="h-[320px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart

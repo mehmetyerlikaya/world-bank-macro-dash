@@ -61,7 +61,7 @@ export function SignalCard({
   );
 
   const cardContent = (
-    <div className="group relative rounded-xl border border-soft-border bg-white p-6 shadow-soft-card transition-all duration-300 hover:shadow-soft-card-hover hover:border-soft-accent/30 focus-within:ring-2 focus-within:ring-soft-accent/30 focus-within:ring-offset-2 focus-within:ring-offset-soft-base cursor-help">
+    <div className="group relative rounded-xl border border-soft-border bg-white p-6 shadow-soft-card transition-all duration-200 hover:-translate-y-0.5 hover:shadow-soft-card-hover hover:border-soft-accent/30 focus-within:ring-2 focus-within:ring-soft-accent/30 focus-within:ring-offset-2 focus-within:ring-offset-soft-base cursor-help">
       <p className="text-soft-accent text-xs font-semibold uppercase tracking-wider mb-3">
         {name}
       </p>

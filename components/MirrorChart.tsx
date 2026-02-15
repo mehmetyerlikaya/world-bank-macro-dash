@@ -59,7 +59,7 @@ export function MirrorChart({
   const allRows: RowData[] = [...momentumRows, ...frictionRows];
 
   return (
-    <div className="rounded-xl border border-soft-border bg-white p-8 shadow-soft-card">
+    <div className="rounded-xl border border-soft-border bg-white p-8 shadow-soft-card transition-all duration-200 hover:-translate-y-0.5 hover:shadow-soft-card-hover">
       <div className="flex items-center justify-between mb-8">
         <h3 className="text-soft-accent text-xs font-semibold uppercase tracking-wider">
           Growth Levers and Headwinds
